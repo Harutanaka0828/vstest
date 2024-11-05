@@ -3,7 +3,7 @@ name: Scheduled Echo
 on:
   push:  # 手動でpushすることで実行される
   schedule:
-    - cron: '*/15 * * * *'  # 15分ごとに実行
+    - cron: '*/15 * * * *'  # 15分毎に実行
 
 jobs:
   echo-job:
