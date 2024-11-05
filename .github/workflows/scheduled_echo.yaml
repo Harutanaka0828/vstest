@@ -3,7 +3,7 @@ name: Scheduled Echo
 on:
   push:  # 手動でpushすることで実行される
   schedule:
-    - cron: '*/1 * * * *'  # 10分ごとに実行
+    - cron: '*/3 * * * *'  # 3分ごとに実行
 
 jobs:
   echo-job:
@@ -11,4 +11,4 @@ jobs:
 
     steps:
       - name: Echo a message
-        run: echo "これは10分ごとに表示されるメッセージです。"
+        run: echo "これは3分ごとに表示されるメッセージです。"
