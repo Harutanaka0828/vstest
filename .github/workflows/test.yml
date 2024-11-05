@@ -1,24 +1,24 @@
-# name: Run Tests
+name: Run Tests
 
-# on:
-#   push: # プッシュイベントで実行
-#   pull_request: # プルリクエストの作成時にも実行
+on:
+  # push:
+  # pull_request:
 
-# jobs:
-#   test:
-#     runs-on: ubuntu-latest
+jobs:
+  test:
+    runs-on: ubuntu-latest
 
-#     steps:
-#       - name: Checkout code
-#         uses: actions/checkout@v2
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-#       - name: Set up Node.js
-#         uses: actions/setup-node@v2
-#         with:
-#           node-version: '14' # 任意のNode.jsのバージョンを指定
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14' # 任意のNode.jsのバージョンを指定
 
-#       - name: Install dependencies
-#         run: npm install
+      - name: Install dependencies
+        run: npm install
 
-#       - name: Run tests
-#         run: npm test
+      - name: Run tests
+        run: npm test
