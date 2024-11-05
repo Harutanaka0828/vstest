@@ -10,5 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Echo a message
-        run: echo "これは15分ごとに表示されるメッセージです。"
+      - name: Echo a message for push
+        if: github.event_name == 'push'  # pushイベントの場合
+        run: echo "これはpushで表示されるメッセージです。"
+
+      - name: Echo a message for cron
+        if: github.event_name == 'schedule'  # cronイベントの場合
+        run: echo "これはcronで15分ごとに表示されるメッセージです。"
+
